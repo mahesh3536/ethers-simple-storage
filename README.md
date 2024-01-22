@@ -1,9 +1,3 @@
-# Ethers Simple Storage
-
-This is part of the FreeCodeCamp Solidity & Javascript Blockchain Course.
-
-Video Link : _[⌨️ (05:30:42) Lesson 5: Ethers.js Simple Storage](https://www.youtube.com/watch?v=gyMwXuJrbJQ&t=19842s)_
-
 # Getting Started
 
 ## Requirements
@@ -20,7 +14,6 @@ Video Link : _[⌨️ (05:30:42) Lesson 5: Ethers.js Simple Storage](https://www
 -   [ganache](https://trufflesuite.com/ganache/)
     -   You'll know you did it right if you can run the application and see:
         <br>
-        <img src="./img/ganache-picture.png" alt="ganache" width="200"/>
     -   You can alternatively use [ganache-cli](https://www.npmjs.com/package/ganache-cli) or [hardhat](https://hardhat.org/)
 
 ### Optional Gitpod
@@ -34,7 +27,7 @@ If you can't or don't want to run and install locally, you can work with this re
 Clone this repo
 
 ```
-git clone https://github.com/PatrickAlphaC/ethers-simple-storage
+git clone https://github.com/mahesh3536/ethers-simple-storage
 cd ethers-simple-storage
 ```
 
@@ -45,10 +38,6 @@ yarn
 ```
 
 > Note: You'll notice in our `package.json` we are using `"solc": "0.8.7-fixed"`. Usually, you'll just be able to do `"solc": "0.8.7"` to get a specific version, but there was a bit of an issue with that one... You'll find out why we use 0.8.7
-
-### Typescript
-
-If you like `typescript`, run `git checkout typescript` then run `yarn`
 
 ## Usage
 
@@ -68,9 +57,6 @@ RPC_URL=http://0.0.0.0:8545
 
 3. Hit the key on one of the accounts, and copy the key you see and place it into your `.env` file, similar to what you see in `.env.example`.
 
-<img src="./img/ganache-key.png" alt="ganache" width="500"/>
-
-<img src="./img/ganache-private-key.png" alt="ganache" width="500"/>
 
 `.env` Example:
 
@@ -131,42 +117,7 @@ USE A METAMASK THAT DOESNT HAVE ANY REAL FUNDS IN IT. Just in case you accidenta
 node deploy.js
 ```
 
----
 
-> Troubleshooting: Ethers 6.X.X instability
 
-```js
-const provider = new ethers.providers.JsonRpcProvider(process.env.RPC_URL)
-                                      ^
-
-TypeError: Cannot read properties of undefined (reading 'JsonRpcProvider')
-```
-
-If you are experiencing issues with the latest version of Ethers, ethers ^6.0.2, try
-
-```js
-const provider = new ethers.JsonRpcProvider(process.env.RPC_URL)
-```
-
-as providers were migrated to ethers._ in version 6 (previously ethers.providers._).
-reference: https://docs.ethers.org/v6/migrating/#migrate-providers
-
-Or you can easily solve the problem by downgrading to a previous version of Ethers, such as ethers 5.7.2.
-
-To downgrade to ethers 5.7.2, run either of the following commands on your command line interface, depending on your package manager:
-
-For npm:
-
-```
-npm install ethers@5.7.2
-```
-
-For yarn:
-
-```
-yarn add ethers@5.7.2
-```
-
----
 
 # Thank you!
